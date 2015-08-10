@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <title>LPTune</title>
+  <!-- This is a simple javascript implementation of OPTune using 
+  -- algorithms by Craig Nuttal --
+  -- This version by Paul Jewell --
+  -- (c) Librepilot --
+  -->
+  
+  <head>
+  </head>
+  <body>
+	 <H1>Librepilot LPTune</H1>
+    <form action = "../">
+      <table>
+        <tr>
+          <td>
+            <select name="escType">
+              <option value="0.8">Rapid ESC (490Hz)</option>
+              <option value="0.9">Rapid ESC (PWMsync)</option>
+              <option value="0.92">OneShot125 (without braking)</option>
+              <option value="1">OneShot125 (active braking)</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <select name="Style">
+              <option value="1">Photographer</option>
+              <option value="2">Cruiser</option>
+              <option value="3">Sport Flyer</option>
+              <option value="4">FPV Racer</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <select name="YawStyle">
+              <option value="1">Soft</option>
+              <option value="2">Gentle</option>
+              <option value="3">Firm</option>
+              <option value="4">Agressive</option>
+            </select>
+          </td>
+        <tr>
+      </table>
+      <input type="button"
+             value="Calculate Parameters!"
+             onclick="calculate();"></input><p/>
+      
+    </form>
+
+    <table>
+      <tr>
+        <td id="PitchKp">0.0</td>
+      </tr>
+    </table>
+    
+    
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
+
